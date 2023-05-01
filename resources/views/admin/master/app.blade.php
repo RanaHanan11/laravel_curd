@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <title>Inventory Management System</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Favicons -->
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
